@@ -27,7 +27,7 @@ from pyrogram.errors import UserNotParticipant
 @Clinton.on_message(filters.private & ~filters.via_bot & filters.regex(pattern=".*http.*"))
 async def echo(bot, update):
     await AddUser(bot, update)
-    imog = await update.reply_text("Processing...⚡", reply_to_message_id=update.message.id)
+    imog = await update.reply_text("Processing...⚡", reply_to_message_id=update.message_id)
     youtube_dl_username = None
     youtube_dl_password = None
     file_name = None
@@ -114,7 +114,7 @@ async def echo(bot, update):
         await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.NO_VOID_FORMAT_FOUND.format(str(error_message)),
-            reply_to_message_id=update.message.id,
+            reply_to_message_id=update.message_id,
             parse_mode="html",
             disable_web_page_preview=True
         )
@@ -238,7 +238,7 @@ async def echo(bot, update):
             text=Translation.FORMAT_SELECTION + "\n" + Translation.SET_CUSTOM_USERNAME_PASSWORD,
             reply_markup=reply_markup,
             parse_mode="html",
-            reply_to_message_id=update.message.id
+            reply_to_message_id=update.message_id
         )
     else:
         # fallback for nonnumeric port a.k.a seedbox.io
@@ -264,5 +264,5 @@ async def echo(bot, update):
             text=Translation.FORMAT_SELECTION,
             reply_markup=reply_markup,
             parse_mode="html",
-            reply_to_message_id=update.message.id
+            reply_to_message_id=update.message_id
         )
