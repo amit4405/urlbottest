@@ -33,7 +33,7 @@ heroku/python
 ```
 
 
-[![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/amit4405/UPLOADER-BOT)
+[![Deploy on Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/amit4405/urlbottest)
 ## BOT COMMANDS
 
 * start - 👻 Check I'm alive or dead
